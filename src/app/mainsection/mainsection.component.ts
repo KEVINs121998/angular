@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import {ProductsDataService} from '../services/products-data.service'
 
+
 @Component({
   selector: 'app-mainsection',
   templateUrl: './mainsection.component.html',
@@ -9,6 +10,8 @@ import {ProductsDataService} from '../services/products-data.service'
 export class MainsectionComponent implements OnInit{
  p:any
   products:any
+  SortbyParam = '';
+  SortDirection = 'asc';
   constructor(private productData:ProductsDataService){}
    
    ngOnInit(): void {
@@ -21,4 +24,12 @@ export class MainsectionComponent implements OnInit{
       }
       )
     }
+    onSortDirection() {
+      if (this.SortDirection === 'desc') {
+        this.SortDirection = 'asc';
+      } else {
+        this.SortDirection = 'desc';
+      }
+    }
+
 }
