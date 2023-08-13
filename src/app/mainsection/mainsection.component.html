@@ -2,7 +2,7 @@
 
   <label>Sort by &nbsp;</label>
   <select [(ngModel)] = 'SortbyParam'>
-    <option value="title">City</option>
+    <option value="title">Name</option>
     <option value="price">Price</option>
   </select>
   <button class="bg-blue-500 rounded px-5" type="button" (click) = "onSortDirection()">Sort
@@ -12,8 +12,9 @@
 </div>
 
 
-<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 pb-10 ">
-  <div *ngFor="let product of products | paginate:{itemsPerPage:4,currentPage:p} | sort:[SortbyParam, SortDirection]" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+
+  <div class="flex flex-wrap justify-center gap-10 pbgiu-5">
+  <div *ngFor="let product of products | paginate:{itemsPerPage:4,currentPage:p} | sort:[SortbyParam, SortDirection]" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
       <img class="w-full rounded-t-lg" src={{product.images}} alt="images"/>
     </a>

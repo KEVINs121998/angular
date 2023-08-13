@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isMenuOpen: boolean = false;
+  isMenuOpen: boolean = true;
   constructor() { }
 
   ngOnInit() { }

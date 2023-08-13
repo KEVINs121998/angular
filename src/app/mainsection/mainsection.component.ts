@@ -8,7 +8,7 @@ import {ProductsDataService} from '../services/products-data.service'
   styleUrls: ['./mainsection.component.css']
 })
 export class MainsectionComponent implements OnInit{
- p:any
+  p:any
   products:any
   SortbyParam = '';
   SortDirection = 'asc';
