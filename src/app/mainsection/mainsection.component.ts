@@ -17,7 +17,7 @@ export class MainsectionComponent implements OnInit{
    ngOnInit(): void {
 
      this.productData.products().subscribe((data)=>{
-       this.products=data;
+       this.products=data.products;
       },
       (error)=>{
         console.error('Error fetching data:', error);

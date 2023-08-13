@@ -12,6 +12,6 @@ export class ProductsDataService {
 
   constructor(private http:HttpClient) { }
 products(): Observable<any> {
-  return this.http.get('https://api.escuelajs.co/api/v1/products');
+  return this.http.get('https://dummyjson.com/products');
 }
 }

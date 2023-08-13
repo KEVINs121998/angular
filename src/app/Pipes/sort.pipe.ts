@@ -3,7 +3,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 @Pipe({name: 'sort'})
 export class SortPipe implements PipeTransform {
 
-    transform(value : Array < string >, sortParams: string[]): any {
+    transform(value : Array < any >, sortParams: string[]): any {
         const sortField = sortParams[0];
         const sortDirection = sortParams[1];
         let multiplier=1
